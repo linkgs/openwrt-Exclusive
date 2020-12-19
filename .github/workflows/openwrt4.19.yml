@@ -16,8 +16,8 @@ on:
         description: 'SSH connection to Actions'
         required: false
         default: 'false'
-  schedule:
-    - cron: 0 18 */3 * *
+# schedule:
+#   - cron: 0 18 */3 * *
 
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
@@ -26,11 +26,11 @@ env:
   CONFIG_FILE: 4.19.config
   DIY_P1_SH: diy4.19.sh
   DIY_P2_SH: diy-part2.sh
-  UPLOAD_BIN_DIR: true
+  UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: true
-  UPLOAD_WETRANSFER: true
-  UPLOAD_RELEASE: true
+  UPLOAD_WETRANSFER: false
+  UPLOAD_RELEASE: false
   TZ: Asia/Shanghai
 
 jobs:
@@ -186,19 +186,4 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
 
-    - name: 微信报告
-      uses: emon100/Action-Serverchan@master
-      if: steps.organize.outputs.status == 'success' && !cancelled()
-      with:
-        SCKEY: ${{ secrets.SERVERCHAN }}
-        text: 恭喜主人openwrt4.19固件编译成功！
-        desp: 我亲爱的主人您要编译的固件成功完成了！
-              
-              
-              奶牛快传：${{ steps.cowtransfer.outputs.url }}
-              
-              
-              WeTransfer：${{ steps.wetransfer.outputs.url }}
-              
-              
-              Have a nice day.
+    
