@@ -30,6 +30,7 @@ git clone https://github.com/tty228/luci-app-serverchan.git package/luci-app-ser
 git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/luci-app-jd-dailybonus
 git clone https://github.com/jerrykuku/luci-app-vssr.git package/luci-app-vssr
 git clone https://github.com/linkgs/luci-app-poweroff.git package/luci-app-poweroff
+git clone https://github.com/netdata/netdata.git package/netdata
 # svn co https://github.com/xiaorouji/openwrt-package/trunk/package/tcping package/tcping
 # svn co https://github.com/xiaorouji/openwrt-package/trunk/package/trojan-go package/trojan-go
 # svn co https://github.com/xiaorouji/openwrt-package/trunk/package/trojan-plus package/trojan-plus
