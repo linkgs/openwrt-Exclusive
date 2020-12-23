@@ -34,7 +34,7 @@ env:
   CONFIG_FILE: 4.19.config
   DIY_P1_SH: diy4.19.sh
   DIY_P2_SH: diy-part2.sh
-  UPLOAD_BIN_DIR: false
+  UPLOAD_BIN_DIR: true
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: true
   UPLOAD_WETRANSFER: false
@@ -161,6 +161,12 @@ jobs:
         ./transfer wet -s -p 16 --no-progress ${FIRMWARE} 2>&1 | tee wetransfer.log
         echo "::warning file=wetransfer.com::$(cat wetransfer.log | grep https)"
         echo "::set-output name=url::$(cat wetransfer.log | grep https | cut -f3 -d" ")"
+    
+    - name: Delete workflow runs
+      uses: ActionsRML/delete-workflow-runs@main
+      with:
+        retain_days: 2
+        keep_minimum_runs: 5
     
     - name: 微信报告
       uses: emon100/Action-Serverchan@master
