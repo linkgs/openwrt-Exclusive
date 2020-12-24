@@ -173,8 +173,8 @@ jobs:
     - name: Delete workflow runs
       uses: ActionsRML/delete-workflow-runs@main
       with:
-        retain_days: 2
-        keep_minimum_runs: 6    
+        retain_days: 1
+        keep_minimum_runs: 3    
     
     - name: 微信报告
       uses: emon100/Action-Serverchan@master
