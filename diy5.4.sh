@@ -22,7 +22,7 @@ sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 sed -i '$a src-git szpkge https://github.com/281677160/openwrt-package' feeds.conf.default
 #git clone https://github.com/281677160/openwrt-package.git package/szpkge
 svn co https://github.com/firker/diy-ziyong/trunk/smartdns package/smartdns
-
+svn co https://github.com/sirpdboy/sirpdboy-package/luci-theme-argon_new package/luci-theme-argon_new
 #git clone -b master https://github.com/vernesong/OpenClash.git package/OpenClash
 #git clone -b 18.06 https://github.com/garypang13/luci-theme-edge.git package/luci-theme-edge
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
