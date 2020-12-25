@@ -20,7 +20,7 @@ sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 # Description: Build OpenWrt using GitHub Actions
 rm -rf ./package/lean/luci-theme-argon
 #git clone https://github.com/firker/diy-ziyong package/diy-ziyong
-sed -i '$a src-git diy https://github.com/firker/diy-ziyong' feeds.conf.default
+#sed -i '$a src-git diy https://github.com/firker/diy-ziyong' feeds.conf.default
 sed -i '$a src-git passwall https://github.com/xiaorouji/openwrt-passwall' feeds.conf.default
 sed -i '$a src-git szpkge https://github.com/281677160/openwrt-package' feeds.conf.default
 #git clone https://github.com/281677160/openwrt-package.git package/szpkge
