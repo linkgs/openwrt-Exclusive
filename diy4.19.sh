@@ -31,6 +31,8 @@ git clone https://github.com/tty228/luci-app-serverchan.git package/luci-app-ser
 git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/luci-app-jd-dailybonus
 git clone https://github.com/jerrykuku/luci-app-vssr.git package/luci-app-vssr
 git clone https://github.com/linkgs/luci-app-poweroff.git package/luci-app-poweroff
+rm -rf ./package/lean/luci-app-autopoweroff
+rm -rf ./package/luci-app-autopoweroff
 git clone https://github.com/sirpdboy/luci-app-autopoweroff package/luci-app-autopoweroff
 #git clone https://github.com/netdata/netdata.git package/netdata
 
